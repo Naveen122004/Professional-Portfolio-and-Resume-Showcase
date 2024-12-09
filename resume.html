@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="bio.html">Bio-data</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="resume">
+      <h2>Resume</h2>
+
+      <!-- Download Resume Button -->
+      <div class="download-resume">
+        <button onclick="downloadResume()">Download Resume</button>
+      </div>
+
+      <!-- Skills Section -->
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="skill">
+          <p>HTML/CSS</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p>JavaScript</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p>Python</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <h3>Projects</h3>
+      <div class="projects">
+        <div class="project" onclick="openModal('ecommerce')">
+          <h4>E-Commerce Platform</h4>
+          <p>A robust platform for online shopping.</p>
+        </div>
+        <div class="project" onclick="openModal('inventory')">
+          <h4>Inventory Management System</h4>
+          <p>Efficient tracking and surplus management.</p>
+        </div>
+        <div class="project" onclick="openModal('portfolio')">
+          <h4>Portfolio Website</h4>
+          <p>Showcasing my skills and projects.</p>
+        </div>
+      </div>
+
+      <!-- Testimonials Section -->
+      <h3>Testimonials</h3>
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <p>"An incredibly talented developer! Highly recommended!"</p>
+          <span>- Client A</span>
+        </div>
+        <div class="testimonial">
+          <p>"Delivered excellent work on time and exceeded expectations."</p>
+          <span>- Client B</span>
+        </div>
+        <div class="testimonial">
+          <p>"A pleasure to collaborate with, brings creative ideas to life."</p>
+          <span>- Client C</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h4 id="modal-title"></h4>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
